@@ -1,0 +1,40 @@
+# Spēle "Metamais kauliņš"
+
+## Spēles apraksts
+Šī ir vienkārša konsoles spēle, kur spēlētājam jāuzmin, kāds skaitlis uzkritīs uz metamā kauliņa. Programma ģenerē nejaušu skaitli no 1 līdz 6.
+
+## Prasību specifikācija
+Programmai jānodrošina:
+- lietotāja ievade
+- skaitļa ievade no 1 līdz 6
+- nejauša skaitļa ģenerēšana
+- rezultāta salīdzināšana
+- punktu skaitīšana
+- spēles beigu rezultāts
+
+## Struktūrskice
+1. Programma sākas.
+2. Parāda spēles noteikumus.
+3. Spēlētājs ievada skaitli.
+4. Programma ģenerē nejaušu skaitli (kauliņa metiens).
+5. Salīdzina rezultātus.
+6. Piešķir punktu.
+7. Atkārto 5 raundus.
+8. Parāda gala rezultātu.
+
+## Testpiemēri
+
+Test 1  
+Ievade: 4  
+Kauliņš: 4  
+Rezultāts: spēlētājs saņem punktu.
+
+Test 2  
+Ievade: 2  
+Kauliņš: 5  
+Rezultāts: punkts netiek piešķirts.
+
+Test 3  
+Ievade: 1  
+Kauliņš: 1  
+Rezultāts: spēlētājs saņem punktu.
