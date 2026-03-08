@@ -1,0 +1,74 @@
+using System;
+
+namespace MetamaisKaulins
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+            int playerScore = 0;
+            int rounds = 5;
+
+            Console.WriteLine("=== SPELE: UZMINI METAMA KAULINA REZULTATU ===");
+            Console.WriteLine("Tev bus " + rounds + " raundi.");
+            Console.WriteLine("Ievadi skaitli no 1 lidz 6.");
+            Console.WriteLine();
+
+            for (int i = 1; i <= rounds; i++)
+            {
+                Console.WriteLine("Raunds #" + i);
+
+                int guess;
+                while (true)
+                {
+                    Console.Write("Tavs minejums: ");
+                    string input = Console.ReadLine();
+
+                    if (int.TryParse(input, out guess) && guess >= 1 && guess <= 6)
+                    {
+                        break;
+                    }
+
+                    Console.WriteLine("Nepareiza ievade! Ievadi veselu skaitli no 1 lidz 6.");
+                }
+
+                int diceRoll = random.Next(1, 7);
+                Console.WriteLine("Metamais kaulins uzkrita: " + diceRoll);
+
+                if (guess == diceRoll)
+                {
+                    Console.WriteLine("Pareizi! Tu dabuu 1 punktu.");
+                    playerScore++;
+                }
+                else
+                {
+                    Console.WriteLine("Nepareizi! Punktu nav.");
+                }
+
+                Console.WriteLine("Tavs pasreizejais punktu skaits: " + playerScore);
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("=== SPELE BEIGUSIES ===");
+            Console.WriteLine("Tavs gala rezultats: " + playerScore + " no " + rounds);
+
+            if (playerScore == rounds)
+            {
+                Console.WriteLine("Perfekts rezultats!");
+            }
+            else if (playerScore >= 3)
+            {
+                Console.WriteLine("Labs rezultats!");
+            }
+            else
+            {
+                Console.WriteLine("Megini velreiz!");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Nospied jebkuru taustinu, lai izietu...");
+            Console.ReadKey();
+        }
+    }
+}
